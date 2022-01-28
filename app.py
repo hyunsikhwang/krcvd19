@@ -169,7 +169,7 @@ df1['date'] = df1['일자'].dt.strftime('%Y%m%d')
 #fig1.show()
 
 # Todo: 이 부분을 Cases 또는 Deaths 의 max 값 대비 일정 비율로 autoscaling 되도록 변경
-x_max = 200
+x_max = 250
 y_max = 2
 
 fig2 = px.scatter(df1[(df1['date'].str[6:8].isin(['01', '15']))]
