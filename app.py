@@ -207,8 +207,8 @@ fig = go.Figure(
                      name='Line',
                      line=dict(width=2, color="blue"))],
     layout=go.Layout(
-        xaxis=dict(range=[0, x_max], autorange=False, zeroline=False, title_text='Cases'),
-        yaxis=dict(range=[0, y_max], autorange=False, zeroline=False, title_text='Deaths'),
+        xaxis=dict(range=[0, x_max], autorange=False, zeroline=False, title_text='Cases per 1M pop'),
+        yaxis=dict(range=[0, y_max], autorange=False, zeroline=False, title_text='Deaths per 1M pop'),
         autosize=False,
         width=1200,
         height=700,
