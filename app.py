@@ -172,8 +172,17 @@ df1['date'] = df1['일자'].dt.strftime('%Y%m%d')
 #x_max = 250
 #y_max = 2
 
-x_max = df1['Cases per mil'].max() * 1.1
-y_max = df1['Deaths per mil'].max() * 1.1
+scale = st.select('Scale', ['Max', 'Current'], key='Max')
+
+if scale=='Current':
+    x_max = df1['Cases per mil'].tail(1) * 1.5
+    y_max = df1['Deaths per mil'].tail(1) * 1.5
+else:
+    x_max = df1['Cases per mil'].max() * 1.1
+    y_max = df1['Deaths per mil'].max() * 1.1
+
+
+
 
 fig2 = px.scatter(df1[(df1['date'].str[6:8].isin(['01', '15']))]
                   , x="Cases per mil"
