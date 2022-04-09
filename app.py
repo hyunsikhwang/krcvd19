@@ -182,8 +182,6 @@ else:
     y_max = df1['Deaths per mil'].max() * 1.1
 
 
-st.write(df1.tail(1))
-
 fig2 = px.scatter(df1[(df1['date'].str[6:8].isin(['01', '15']))]
                   , x="Cases per mil"
                   , y="Deaths per mil"
