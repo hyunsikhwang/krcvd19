@@ -172,7 +172,7 @@ df1['date'] = df1['일자'].dt.strftime('%Y%m%d')
 #x_max = 250
 #y_max = 2
 
-scale = st.select('Scale', ['Max', 'Current'], key='Max')
+scale = st.selectbox('Scale', ['Max', 'Current'], key='Max')
 
 if scale=='Current':
     x_max = df1['Cases per mil'].tail(1) * 1.5
