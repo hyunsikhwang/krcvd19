@@ -256,11 +256,11 @@ fig = go.Figure(
 # Add shapes
 fig.add_shape(type="rect", x0=0,   y0=0,   x1=100,     y1=5.0,   line=dict(color="Green",  width=0,), fillcolor="Green",  opacity=0.4,)
 fig.add_shape(type="rect", x0=0,   y0=5.0, x1=100,     y1=y_max, line=dict(color="Green",  width=0,), fillcolor="Yellow", opacity=0.4,)
-fig.add_shape(type="rect", x0=100, y0=0,   x1=800,     y1=1.0,   line=dict(color="Green",  width=0,), fillcolor="Green",  opacity=0.4,)
-fig.add_shape(type="rect", x0=100, y0=1.0, x1=800,     y1=5.0,   line=dict(color="Yellow", width=0,), fillcolor="Yellow", opacity=0.4,)
+fig.add_shape(type="rect", x0=100, y0=0,   x1=800,     y1=2.0,   line=dict(color="Green",  width=0,), fillcolor="Green",  opacity=0.4,)
+fig.add_shape(type="rect", x0=100, y0=2.0, x1=800,     y1=5.0,   line=dict(color="Yellow", width=0,), fillcolor="Yellow", opacity=0.4,)
 fig.add_shape(type="rect", x0=100, y0=5.0, x1=800,     y1=y_max, line=dict(color="Yellow", width=0,), fillcolor="Red",    opacity=0.4,)
-fig.add_shape(type="rect", x0=800, y0=0,   x1=x_max,   y1=1.0,   line=dict(color="Yellow", width=0,), fillcolor="Yellow", opacity=0.4,)
-fig.add_shape(type="rect", x0=800, y0=1.0, x1=x_max,   y1=y_max, line=dict(color="Red",    width=0,), fillcolor="Red",    opacity=0.4,)
+fig.add_shape(type="rect", x0=800, y0=0,   x1=x_max,   y1=2.0,   line=dict(color="Yellow", width=0,), fillcolor="Yellow", opacity=0.4,)
+fig.add_shape(type="rect", x0=800, y0=2.0, x1=x_max,   y1=y_max, line=dict(color="Red",    width=0,), fillcolor="Red",    opacity=0.4,)
 
 
 fig.update_xaxes(showspikes=True, spikecolor="green", spikesnap="cursor", spikemode="across")
