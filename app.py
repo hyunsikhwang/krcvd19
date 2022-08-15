@@ -115,11 +115,11 @@ df4 = df4.fillna(0)
 fig4 = px.area(df4, x="일자", y="발생률비중MA", color="연령대")
 fig4.update_xaxes(dtick='M1')
 #fig4.show()
-st.plotly_chart(fig4, use_container_width=True)
+#st.plotly_chart(fig4, use_container_width=True)
 
 fig5 = px.line(df4, x='일자', y='발생률MA', line_group='연령대', color='연령대')
 #fig5.show()
-st.plotly_chart(fig5, use_container_width=True)
+#st.plotly_chart(fig5, use_container_width=True)
 
 #display(df4)
 #fig4.write_html("file.html")
@@ -269,5 +269,15 @@ fig.update_layout(height=800, spikedistance=1000, hoverdistance=100)
 
 
 #fig.show()
-st.plotly_chart(fig, use_container_width=True)
+#st.plotly_chart(fig, use_container_width=True)
 #fig.write_html('COVID-19_Korea.html')
+
+
+tab1, tab2, tab3 = st.tabs(["Confirmed cases and deaths", "Proportion by age group", "Incidence rate by age group"])
+
+with tab1:
+    st.plotly_chart(fig, use_container_width=True)
+with tab2:
+    st.plotly_chart(fig4, use_container_width=True)
+with tab3:
+    st.plotly_chart(fig5, use_container_width=True)
