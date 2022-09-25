@@ -44,7 +44,7 @@ def init(path):
         # open('./COVID-19.xlsx', 'wb').write(r.content)
 
         # revised as of 2022.09.25 due to changing NCOV web site
-        st.write(path)
+        # st.write(path)
         wget.download(path, './COVID-19.xlsx')
 
         xls = pd.ExcelFile('COVID-19.xlsx')
