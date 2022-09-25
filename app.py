@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
+import wget
 
 
 st.set_page_config(
@@ -39,8 +40,11 @@ def init(path):
     try:
 
         # File Download (COVID-19.xlsx)
-        r = requests.get(path, allow_redirects=True)
-        open('./COVID-19.xlsx', 'wb').write(r.content)
+        # r = requests.get(path, allow_redirects=True)
+        # open('./COVID-19.xlsx', 'wb').write(r.content)
+
+        # revised as of 2022.09.25 due to changing NCOV web site
+        wget.download(path, 'COVID-19.xlsx')
 
         xls = pd.ExcelFile('COVID-19.xlsx')
 
