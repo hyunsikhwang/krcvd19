@@ -30,7 +30,7 @@ def get_covid19_xlsx():
     #for a in response.findAll('div', {"class":"liveNum_today_new"}):
     for a in response.findAll('div', {"class":"occur_num"}):   
         for b in a.findAll('a'):                                         
-            path = url + b.get('href')
+            path = b.get('href')
     
     return path
 
